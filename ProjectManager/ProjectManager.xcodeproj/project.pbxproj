@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		37A2D8152966B41A007F297C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2D8142966B41A007F297C /* main.swift */; };
+		37B4A86A2968376800B544EB /* DBApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B4A8672968376800B544EB /* DBApi.swift */; };
+		37B4A86B2968376800B544EB /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B4A8682968376800B544EB /* DBManager.swift */; };
+		37B4A86C2968376800B544EB /* DBModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B4A8692968376800B544EB /* DBModels.swift */; };
+		37B4A86F296AF47700B544EB /* Test .swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B4A86E296AF47700B544EB /* Test .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,10 @@
 /* Begin PBXFileReference section */
 		37A2D8112966B41A007F297C /* ProjectManager */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjectManager; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A2D8142966B41A007F297C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		37B4A8672968376800B544EB /* DBApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBApi.swift; sourceTree = "<group>"; };
+		37B4A8682968376800B544EB /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		37B4A8692968376800B544EB /* DBModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBModels.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		37B4A86E296AF47700B544EB /* Test .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Test .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +65,21 @@
 		37A2D8132966B41A007F297C /* ProjectManager */ = {
 			isa = PBXGroup;
 			children = (
+				37B4A86D296AF45000B544EB /* New Group */,
 				37A2D8142966B41A007F297C /* main.swift */,
+				37B4A8672968376800B544EB /* DBApi.swift */,
+				37B4A8682968376800B544EB /* DBManager.swift */,
+				37B4A8692968376800B544EB /* DBModels.swift */,
 			);
 			path = ProjectManager;
+			sourceTree = "<group>";
+		};
+		37B4A86D296AF45000B544EB /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				37B4A86E296AF47700B544EB /* Test .swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,7 +140,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B4A86A2968376800B544EB /* DBApi.swift in Sources */,
+				37B4A86F296AF47700B544EB /* Test .swift in Sources */,
+				37B4A86B2968376800B544EB /* DBManager.swift in Sources */,
 				37A2D8152966B41A007F297C /* main.swift in Sources */,
+				37B4A86C2968376800B544EB /* DBModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

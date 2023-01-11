@@ -8,18 +8,26 @@
 import Foundation
 import SQLite3
 
-class DBManager {
-    var db: OpaquePointer? = nil
+protocol Manager {
+    static var db: OpaquePointer? { get }
     
-    init() {
-        openDatabase()
-    }
+    static func openDatabase()
+//    func insertRow()
+    func updateDetails()
+    func deleteDetails()
     
-    func openDatabase(){
+}
+
+class DBManager: Manager {
+    static var db: OpaquePointer?
+    
+//    init() {
+//        openDatabase()
+//    }
+    
+    static func openDatabase(){
         //Database path generation
         let dbPath = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("Swift_Console_App/ProjectManager/ProjectManager.sqlite")
-        
-//        print(try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("Swift_Console_App/ProjectManager.sqlite"))
         
         guard let dbPath = dbPath else {
             print("Path is nil")
@@ -33,4 +41,26 @@ class DBManager {
             print("ERROR : \(String(cString: sqlite3_errmsg(db)))")
         }
     }
+    
+    func insertRow(insertString: String) {
+        var insertStatement: OpaquePointer?
+        
+        if sqlite3_prepare_v2(DBManager.db, insertString, -1, &insertStatement, nil) == SQLITE_OK {
+            if sqlite3_step(insertStatement) == SQLITE_DONE {
+                print("Inserted successfully")
+            }
+            else {
+                print("Insertion Error: \(String(describing: sqlite3_errmsg(insertStatement)))")
+            }
+        }
+    }
+    
+    func updateDetails() {
+        
+    }
+    
+    func deleteDetails() {
+        
+    }
+    
 }
