@@ -48,6 +48,7 @@ class DBManager: Manager {
         if sqlite3_prepare_v2(DBManager.db, insertString, -1, &insertStatement, nil) == SQLITE_OK {
             if sqlite3_step(insertStatement) == SQLITE_DONE {
                 print("Inserted successfully")
+                
             }
             else {
                 print("Insertion Error: \(String(describing: sqlite3_errmsg(insertStatement)))")

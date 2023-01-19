@@ -22,7 +22,6 @@ extension Dict {
     }
 }
 
-
 class DBApi {
     var db: DBManager = DBManager()
     
